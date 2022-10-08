@@ -1,0 +1,39 @@
+// Here you can add other styles
+.header-sticky {
+    box-shadow: 3px 0px 20px rgb(0 0 0 / 4%);
+    
+}
+
+.sidebar-brand {
+    padding: 0 26px;
+    justify-content: left;
+}
+
+.icon-custom-size {
+    width: 110px;
+}
+
+.nav-link-highlighted {
+    color: $sidebar-nav-link-highlight-color !important;
+}
+
+.nav-icon {
+    width: max-content !important;
+    margin-left: unset !important;
+}
+
+.nav-link {
+    font-size: 13px;
+}
+
+.nav-title {
+    margin: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba($primary-50, .28) !important;
+}
+
+.main-content {
+    background-color: $grey-background;
+}
