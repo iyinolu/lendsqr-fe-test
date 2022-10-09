@@ -1,0 +1,42 @@
+.users-dashoard {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.users-table {
+    & .card {
+        padding: 30px;
+    }
+
+    & table {
+        & tr {
+            height: 51px;
+        }
+        & th,
+        td {
+            font-size: 12px;
+        }
+
+        & .users-table-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            & .filter-btn {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.users-status {
+    padding: 5px 15px;
+    background: #ffebf0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}

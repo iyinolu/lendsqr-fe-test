@@ -1,7 +1,7 @@
 // Here you can add other styles
 .header-sticky {
     box-shadow: 3px 0px 20px rgb(0 0 0 / 4%);
-    
+
 }
 
 .sidebar-brand {
@@ -36,4 +36,8 @@
 
 .main-content {
     background-color: $grey-background;
+}
+
+.card {
+    box-shadow: 3px 5px 20px rgb(0 0 0 / 4%) !important;
 }

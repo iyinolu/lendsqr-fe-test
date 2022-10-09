@@ -1,5 +1,6 @@
 // If you want to override variables do it here
 @import "variables";
+@import "brand-variables";
 
 $enable-ltr: true;
 $enable-rtl: true;
@@ -15,3 +16,11 @@ $enable-rtl: true;
 
 // If you want to add custom CSS you can put it here.
 @import "custom";
+
+// Components
+@import "components/content-layout";
+@import "components/info-card";
+
+
+// Views
+@import "views/users.scss";

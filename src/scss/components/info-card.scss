@@ -1,0 +1,58 @@
+.info-card {
+    & .card {
+        padding: 17.6px 23.8px !important;
+        min-width: 13rem;
+    }
+
+    & .card-title {
+        color: #213f7d !important;
+    }
+
+    & .card-subtitle {
+        font-size: 10px;
+        margin-bottom: 10px !important;
+    }
+    & .card-body {
+        padding: 0 !important;
+    }
+    & .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+.info-card-header {
+    display: flex;
+    margin-bottom: 21px;
+}
+
+@mixin info-card-icon($background) {
+    padding: 7px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $background;
+
+    & .icon {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
+.users-icon {
+    @include info-card-icon(rgb(223 24 255 / 10%));
+}
+
+.active-users {
+    @include info-card-icon(rgba(#5718ff, 0.1));
+}
+
+.users-with-loan {
+    @include info-card-icon(rgba(#f55f44, 0.1));
+}
+
+.users-with-savings {
+    @include info-card-icon(rgba(#ff3366, 0.1));
+}
