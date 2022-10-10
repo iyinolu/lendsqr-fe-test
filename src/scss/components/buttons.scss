@@ -1,0 +1,31 @@
+.blacklist-btn {
+    --cui-btn-color: #E4033B;
+    --cui-btn-border-color: #E4033B;
+    --cui-btn-hover-color: rgb(255, 255, 255);
+    --cui-btn-hover-bg: #E4033B;
+    --cui-btn-hover-border-color: #E4033B;
+    --cui-btn-focus-shadow-rgb: 228, 3, 59;
+    --cui-btn-active-color: rgb(255, 255, 255);
+    --cui-btn-active-bg: #E4033B;
+    --cui-btn-active-border-color: #E4033B;
+    --cui-btn-active-shadow: inset 0 3px 5px #e4033b1b;
+    --cui-btn-disabled-color: #E4033B;
+    --cui-btn-disabled-bg: transparent;
+    --cui-gradient: none;
+}
+
+.activate-btn {
+    --cui-btn-color: #39CDCC;
+    --cui-btn-border-color: #39CDCC;
+    --cui-btn-hover-color: rgb(255, 255, 255);
+    --cui-btn-hover-bg: #39CDCC;
+    --cui-btn-hover-border-color: #39CDCC;
+    --cui-btn-focus-shadow-rgb: 57, 205, 204;
+    --cui-btn-active-color: rgb(255, 255, 255);
+    --cui-btn-active-bg: #39CDCC;
+    --cui-btn-active-border-color: #39CDCC;
+    --cui-btn-active-shadow: inset 0 3px 5px #39cdcd11;
+    --cui-btn-disabled-color: #39CDCC;
+    --cui-btn-disabled-bg: transparent;
+    --cui-gradient: none;
+}

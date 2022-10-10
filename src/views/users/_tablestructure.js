@@ -1,15 +1,6 @@
 import React from 'react'
 import { verticalEllispsis } from 'src/assets/icons/verticalEllipsis'
-import {
-  CBadge,
-  CDropdown,
-  CDropdownDivider,
-  CDropdownHeader,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
-} from '@coreui/react'
-import { cilBell, cilEnvelopeOpen, cilLockLocked } from '@coreui/icons'
+import { CDropdownItem } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { eye } from 'src/assets/icons/eye'
 import { blacklistUser } from 'src/assets/icons/blacklist-user'
@@ -17,8 +8,8 @@ import { activateUser } from 'src/assets/icons/activateUser'
 
 const CustomDropdown = React.lazy(() => import('src/components/dropdown/CustomDropdown'))
 
-const _actionStructure = [
-  { icon: <CIcon icon={eye} className="me-3" />, text: 'View Details' },
+const _actionStructure = (data) => [
+  { icon: <CIcon icon={eye} className="me-3" />, text: 'View Details', link: `#/users/${data.id}` },
   {
     icon: <CIcon icon={blacklistUser} className="me-3" />,
     text: 'Blacklist User',
@@ -41,30 +32,14 @@ function renderAction(data) {
   const onRenderMenu = () => {
     return (
       <>
-        {_actionStructure.map((item, idx) => {
+        {_actionStructure(data).map((item, idx) => {
           return (
-            <CDropdownItem key={idx} href="#">
+            <CDropdownItem key={idx} href={item.link}>
               {item.icon}
               {item.text}
             </CDropdownItem>
           )
         })}
-        {/* <CDropdownItem href="#">
-          <CIcon icon={eye} className="me-2" />
-          Updates
-        </CDropdownItem>
-        <CDropdownItem href="#">
-          <CIcon icon={cilEnvelopeOpen} className="me-2" />
-          Messages
-          <CBadge color="success" className="ms-2">
-            42
-          </CBadge>
-        </CDropdownItem>
-        <CDropdownDivider />
-        <CDropdownItem href="#">
-          <CIcon icon={cilLockLocked} className="me-2" />
-          Lock Account
-        </CDropdownItem> */}
       </>
     )
   }

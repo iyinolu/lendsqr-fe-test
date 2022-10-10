@@ -1,5 +1,6 @@
 export const usersData = [
   {
+    id: 3,
     organization: 'Lendsqr',
     username: 'Ayodeji',
     email: 'ayodeji@lendsqr.com',
@@ -8,6 +9,7 @@ export const usersData = [
     status: 'inactive',
   },
   {
+    id: 34,
     organization: 'Lendsqr',
     username: 'Debby Ogana',
     email: 'ayodeji@lendsqr.com',
@@ -16,6 +18,7 @@ export const usersData = [
     status: 'inactive',
   },
   {
+    id: 32,
     organization: 'Lendsqr',
     username: 'Grace Effiom',
     email: 'ayodeji@lendsqr.com',
@@ -24,6 +27,7 @@ export const usersData = [
     status: 'inactive',
   },
   {
+    id: 42,
     organization: 'Lendsqr',
     username: 'Tosin Dokunmu',
     email: 'ayodeji@lendsqr.com',
@@ -32,6 +36,7 @@ export const usersData = [
     status: 'pending',
   },
   {
+    id: 35,
     organization: 'Lendsqr',
     username: 'Grace Effion',
     email: 'ayodeji@lendsqr.com',
@@ -40,6 +45,7 @@ export const usersData = [
     status: 'blacklisted',
   },
   {
+    id: 30,
     organization: 'Lendsqr',
     username: 'Grace Effiom',
     email: 'ayodeji@lendsqr.com',
@@ -48,6 +54,7 @@ export const usersData = [
     status: 'pending',
   },
   {
+    id: 31,
     organization: 'Lendsqr',
     username: 'Tosin Dokunmu',
     email: 'ayodeji@lendsqr.com',
@@ -56,6 +63,7 @@ export const usersData = [
     status: 'active',
   },
   {
+    id: 44,
     organization: 'Lendsqr',
     username: 'Grace Effion',
     email: 'ayodeji@lendsqr.com',

@@ -1,5 +1,7 @@
-content-header {
+.content-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .content-title {
     color: $primary-text-color;

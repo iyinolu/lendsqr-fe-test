@@ -20,7 +20,10 @@ $enable-rtl: true;
 // Components
 @import "components/content-layout";
 @import "components/info-card";
+@import "components/buttons";
 
 
 // Views
 @import "views/users.scss";
+@import "views/userdetails.scss";
+

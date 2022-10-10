@@ -4,7 +4,7 @@ import CIcon from '@coreui/icons-react'
 import { filterIcon } from 'src/assets/icons/filter'
 import PropTypes from 'prop-types'
 
-export const BaseTable = ({ structure, data, onRenderActionPopover }) => {
+export const BaseTable = ({ structure, data }) => {
   const renderCell = (row, col, idx) => {
     switch (col.type) {
       case 'text':
@@ -51,5 +51,4 @@ export const BaseTable = ({ structure, data, onRenderActionPopover }) => {
 BaseTable.propTypes = {
   structure: PropTypes.arrayOf(PropTypes.any).isRequired,
   data: PropTypes.arrayOf(PropTypes.any),
-  onRenderActionPopover: PropTypes.func,
 }
