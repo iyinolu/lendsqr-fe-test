@@ -3,9 +3,19 @@ import { CCard } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { filterIcon } from 'src/assets/icons/filter'
 import PropTypes from 'prop-types'
-import objectPath from 'object-path'
 
 export const BaseTable = ({ structure, data, onRenderActionPopover }) => {
+  const renderCell = (row, col, idx) => {
+    switch (col.type) {
+      case 'text':
+        return <td key={idx}>{row[col.path]}</td>
+      case 'action':
+        return col.renderAction(row)
+      default:
+        return <></>
+    }
+  }
+
   return (
     <CCard>
       <table>
@@ -29,13 +39,7 @@ export const BaseTable = ({ structure, data, onRenderActionPopover }) => {
         </thead>
         <tbody>
           {data.map((row, idx) => {
-            return (
-              <tr key={idx}>
-                {structure.map((col, idx) => {
-                  return <td key={idx}>{row[col.path]}</td>
-                })}
-              </tr>
-            )
+            return <tr key={idx}>{structure.map((col, colIdx) => renderCell(row, col, colIdx))}</tr>
           })}
           <tr></tr>
         </tbody>

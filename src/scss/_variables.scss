@@ -1,3 +1,4 @@
+@import "brand-variables";
 // Variables
 //
 // If you want to customize your project please uncomment and update one of the following variables.
@@ -1088,20 +1089,20 @@ $nav-link-font-size: 13px;
 // scss-docs-start dropdown-variables
 // $dropdown-min-width:                10rem !default;
 // $dropdown-padding-x:                0 !default;
-// $dropdown-padding-y:                .5rem !default;
+$dropdown-padding-y: 15px;
 // $dropdown-spacer:                   .125rem !default;
 // $dropdown-font-size:                $font-size-base !default;
 // $dropdown-color:                    $body-color !default;
 // $dropdown-bg:                       $white !default;
 // $dropdown-border-color:             rgba($black, .15) !default;
 // $dropdown-border-radius:            $border-radius !default;
-// $dropdown-border-width:             $border-width !default;
+$dropdown-border-width: 0;
 // $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 // $dropdown-divider-bg:               $dropdown-border-color !default;
 // $dropdown-divider-margin-y:         $spacer / 2 !default;
-// $dropdown-box-shadow:               $box-shadow !default;
+$dropdown-box-shadow: 1px 1px 20px 20px rgb(0 0 0 / 4%);
 
-// $dropdown-link-color:               $gray-900 !default;
+$dropdown-link-color: $secondary-text-color;
 // $dropdown-link-hover-color:         shade-color($gray-900, 10%) !default;
 // $dropdown-link-hover-bg:            $gray-200 !default;
 
@@ -1110,7 +1111,7 @@ $nav-link-font-size: 13px;
 
 // $dropdown-link-disabled-color:      $gray-500 !default;
 
-// $dropdown-item-padding-y:           $spacer / 4 !default;
+$dropdown-item-padding-y: 0.4rem;
 // $dropdown-item-padding-x:           $spacer !default;
 
 // $dropdown-header-color:             $gray-600 !default;

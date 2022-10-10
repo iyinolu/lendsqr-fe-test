@@ -12,6 +12,8 @@
     }
 
     & table {
+        color: $secondary-text-color;
+        
         & tr {
             height: 51px;
         }
