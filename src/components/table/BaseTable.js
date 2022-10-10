@@ -3,14 +3,26 @@ import { CCard } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { filterIcon } from 'src/assets/icons/filter'
 import PropTypes from 'prop-types'
+import objectPath from 'object-path'
 
 export const BaseTable = ({ structure, data }) => {
   const renderCell = (row, col, idx) => {
     switch (col.type) {
       case 'text':
-        return <td key={idx}>{row[col.path]}</td>
+        let value = '-'
+        if (col.path) {
+          value = objectPath.get(row, col.path)
+        } else if (col.renderer) {
+          value = col.renderer(row)
+        } else if (col.default) {
+          value = col.default
+        }
+
+        return <td key={idx}>{value}</td>
       case 'action':
         return col.renderAction(row)
+      case 'badge':
+        return <td key={idx}>{col.renderer(row)}</td>
       default:
         return <></>
     }

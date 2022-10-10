@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { CButton } from '@coreui/react'
 import { CCard } from '@coreui/react'
 import { _personal_data, _education_data, _guarantor_data, _social_data } from './temp/_data'
-import { useDataById } from './hooks/useDataById'
+import { useDataById } from '../../hooks/useDataById'
 import { useParams } from 'react-router-dom'
 
 const ContentLayout = React.lazy(() => import('../../components/ContentLayout'))

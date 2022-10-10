@@ -4,10 +4,12 @@ import { BaseTable } from 'src/components/table/BaseTable'
 import { usersInfo } from './_usersInfo'
 import { usersData } from './temp/usersdata'
 import { _structure } from './_tablestructure'
+import { useAllUserData } from '../../hooks/useAllUserData'
 
 const ContentLayout = React.lazy(() => import('../../components/ContentLayout'))
 
 export const Users = () => {
+  const [usersData] = useAllUserData()
   return (
     <ContentLayout title="Users" headerActionComponent={() => <></>}>
       <div>

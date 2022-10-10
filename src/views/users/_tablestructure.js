@@ -54,13 +54,13 @@ export const _structure = [
   {
     columnName: 'ORGANIZATION',
     hasFilter: true,
-    path: 'organization',
+    path: 'orgName',
     type: 'text',
   },
   {
     columnName: 'USERNAME',
     hasFilter: true,
-    path: 'username',
+    path: 'userName',
     type: 'text',
   },
   {
@@ -78,14 +78,14 @@ export const _structure = [
   {
     columnName: 'DATE JOINED',
     hasFilter: true,
-    path: 'dateJoined',
+    renderer: (data) => data?.lastActiveDate?.split('T')[0],
     type: 'text',
   },
   {
     columnName: 'STATUS',
     hasFilter: true,
-    path: 'status',
-    type: 'text',
+    type: 'badge',
+    renderer: (data) => <span className="active-badge">Active</span>,
   },
   {
     columnName: '',

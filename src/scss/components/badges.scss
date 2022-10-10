@@ -1,0 +1,11 @@
+@mixin badge($primary-color, $secondary-color) {
+    padding: 8px 15px;
+    color: $primary-color;
+    background: $secondary-color;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.active-badge {
+    @include badge(#39cd62, rgba(#39cd62, 0.06));
+}
