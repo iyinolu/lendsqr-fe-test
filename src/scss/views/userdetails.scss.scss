@@ -3,3 +3,123 @@
     column-gap: 20px;
     grid-template-columns: 1fr 1fr;
 }
+
+.profile-card {
+    margin-top: 40px;
+
+    & .card {
+        height: max-content !important;
+    }
+}
+
+.profilecard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 30px 0;
+
+    & #details {
+        display: flex;
+        align-items: center;
+        width: max-content;
+
+        & .avatar-xl {
+            width: 5rem !important;
+            height: 5rem !important;
+        }
+
+        & .detail-col {
+            padding: 15px;
+
+            & h2 {
+                font-size: 19px !important;
+            }
+
+            & h2,
+            p {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        & .user-quick-bio {
+            padding-right: 33px;
+        }
+
+        & .bank-info {
+            padding-left: 33px;
+        }
+
+        & .user-tier {
+            width: 145px;
+        }
+
+        & .user-tier > div {
+            width: max-content;
+        }
+    }
+}
+
+.vertical-divide {
+    height: 70%;
+    width: 1px;
+    background-color: #8080804a;
+}
+
+.users-stars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.user-details-nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+
+    & button {
+        border: none;
+        color: grey;
+        border-bottom: 2px solid transparent;
+        background: none;
+        font-size: 0.9rem;
+        padding: 10px;
+
+        &:focus {
+            color: $primary-brand-color;
+            border-color: $primary-brand-color;
+        }
+
+        &:hover {
+            color: $primary-brand-color;
+            border-color: $primary-brand-color;
+        }
+    }
+}
+
+.full-details {
+    margin-top: 40px;
+
+    & .detail-section {
+        padding: 25px;
+
+        & #content {
+            display: grid;
+            column-gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            margin-top: 25px;
+            row-gap: 20px;
+        }
+    }
+}
+
+.detail-item {
+    & h4 {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    & p {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+}
