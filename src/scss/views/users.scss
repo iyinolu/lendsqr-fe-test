@@ -7,13 +7,15 @@
 }
 
 .users-table {
+    min-width: 100%;
+
     & .card {
-        padding: 30px;
+        padding: 16px;
     }
 
     & table {
         color: $secondary-text-color;
-        
+
         & tr {
             height: 51px;
         }
@@ -41,4 +43,32 @@
     display: flex;
     justify-content: center;
     width: max-content;
+}
+
+.md-table-fields {
+    display: none;
+}
+
+.sm-md-table-fields {
+    display: none;
+}
+
+@media (min-width: 796px) {
+    .sm-md-table-fields {
+        display: table-cell;
+    }
+}
+
+@media (min-width: 960px) {
+    .md-table-fields {
+        display: table-cell;
+    }
+
+    .users-table {
+        min-width: 100%;
+
+        & .card {
+            padding: 30px;
+        }
+    }
 }

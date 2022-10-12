@@ -2,7 +2,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 .content-title {
     color: $primary-text-color;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 620px) {
+    .content-header {
+        flex-direction: row;
+    }
+
+    .content-title {
+        margin-bottom: 0;
+    }
 }

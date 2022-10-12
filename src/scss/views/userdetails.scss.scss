@@ -22,6 +22,7 @@
         display: flex;
         align-items: center;
         width: max-content;
+        flex-direction: column;
 
         & .avatar-xl {
             width: 5rem !important;
@@ -121,5 +122,37 @@
     & p {
         font-size: 0.9rem;
         font-weight: 600;
+    }
+}
+
+.profilecard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 30px 0;
+
+    & #details {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    & #navigation {
+        display: none;
+    }
+}
+
+@media (min-width: 765px) {
+    .profilecard-container {
+        & #details {
+            flex-direction: row;
+            text-align: start;
+        }
+
+        & #navigation {
+            display: block;
+        }
     }
 }

@@ -9,7 +9,7 @@
 $white: #fff;
 $grey-background: #fbfbfb;
 // $gray-base: #3c4b64 !default;
-// $gray-100:  #ebedef !default;
+$gray-100: #ebedef;
 // $gray-200:  #d8dbe0 !default;
 // $gray-300:  #c4c9d0 !default;
 // $gray-400:  #b1b7c1 !default;
@@ -286,7 +286,7 @@ $primary-25: rgba(#39cdcc, 0.5);
 
 // Set mobile breakpoint
 
-// $mobile-breakpoint:           md !default;
+$mobile-breakpoint: xl;
 
 // Prefix for :root CSS variables
 
@@ -1104,14 +1104,14 @@ $dropdown-box-shadow: 1px 1px 20px 20px rgb(0 0 0 / 4%);
 
 $dropdown-link-color: $secondary-text-color;
 // $dropdown-link-hover-color:         shade-color($gray-900, 10%) !default;
-// $dropdown-link-hover-bg:            $gray-200 !default;
+$dropdown-link-hover-bg: $gray-100;
 
-// $dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-color: rgb(245 242 242 / 57%);
 // $dropdown-link-active-bg:           $component-active-bg !default;
 
 // $dropdown-link-disabled-color:      $gray-500 !default;
 
-$dropdown-item-padding-y: 0.4rem;
+$dropdown-item-padding-y: 0.6rem;
 // $dropdown-item-padding-x:           $spacer !default;
 
 // $dropdown-header-color:             $gray-600 !default;

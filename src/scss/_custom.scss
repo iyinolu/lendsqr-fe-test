@@ -1,3 +1,8 @@
+.body {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 .header-sticky {
     box-shadow: 3px 0px 20px rgb(0 0 0 / 4%);
 }
@@ -5,6 +10,10 @@
 .sidebar-brand {
     padding: 0 26px;
     justify-content: left;
+}
+
+.sidebar-nav {
+    padding-top: 40px;
 }
 
 .icon-custom-size {
@@ -16,7 +25,7 @@
 }
 
 .nav-icon {
-    width: max-content !important;
+    width: unset !important;
     margin-left: unset !important;
 }
 
@@ -50,8 +59,24 @@
     margin-bottom: 0;
     list-style: none;
     color: $secondary-text-color;
+    padding-inline-start: 0px;
 
-    .dropdown-item {
+    & .dropdown-item {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 960px) {
+    .body {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .dropdown-container {
+        padding-inline-start: 40px;
+    }
+
+    .sidebar-nav {
+        padding-top: 0;
     }
 }

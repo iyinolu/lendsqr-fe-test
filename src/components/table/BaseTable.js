@@ -18,13 +18,32 @@ export const BaseTable = ({ structure, data }) => {
           value = col.default
         }
 
-        return <td key={idx}>{value}</td>
+        return (
+          <td className={assignTableCellClass(col)} key={idx}>
+            {value}
+          </td>
+        )
       case 'action':
         return col.renderAction(row)
       case 'badge':
-        return <td key={idx}>{col.renderer(row)}</td>
+        return (
+          <td className={assignTableCellClass(col)} key={idx}>
+            {col.renderer(row)}
+          </td>
+        )
       default:
         return <></>
+    }
+  }
+
+  const assignTableCellClass = (cellInfo) => {
+    switch (cellInfo?.screen) {
+      case 'md':
+        return 'md-table-fields'
+      case 'md-sm':
+        return 'sm-md-table-fields'
+      default:
+        return ''
     }
   }
 
@@ -35,7 +54,7 @@ export const BaseTable = ({ structure, data }) => {
           <tr>
             {structure.map((item, idx) => {
               return (
-                <th key={idx} scope="col">
+                <th key={idx} scope="col" className={assignTableCellClass(item)}>
                   <div className="users-table-header">
                     <span>{item.columnName}</span>
                     {item.hasFilter && (
