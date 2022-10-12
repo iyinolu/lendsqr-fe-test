@@ -4,6 +4,8 @@ import defaultProfileImg from '../../../assets/images/avatars/default-avatar.png
 import { starChecked, starUnchecked } from 'src/assets/icons/star'
 import CIcon from '@coreui/icons-react'
 
+const MobileNav = React.lazy(() => import('./mobileNav'))
+
 export const ProfileCard = () => {
   return (
     <CCard>
@@ -34,6 +36,7 @@ export const ProfileCard = () => {
           </div>
         </div>
         <div id="navigation" className="mt-4">
+          <MobileNav />
           <ul role="navigation" aria-label="user details navigation" className="user-details-nav">
             <li>
               <button>General Details</button>

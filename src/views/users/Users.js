@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InfoCard from 'src/components/infographics/infoCard'
 import { BaseTable } from 'src/components/table/BaseTable'
 import { usersInfo } from './_usersInfo'
-import { usersData } from './temp/usersdata'
 import { _structure } from './_tablestructure'
 import { useAllUserData } from '../../hooks/useAllUserData'
 
 const ContentLayout = React.lazy(() => import('../../components/ContentLayout'))
 
 export const Users = () => {
+  const [page, setPage] = useState(1)
   const [usersData] = useAllUserData()
   return (
     <ContentLayout title="Users" headerActionComponent={() => <></>}>
@@ -19,7 +19,13 @@ export const Users = () => {
           ))}
         </section>
         <section id="users-table" className="users-table" style={{ marginTop: '20px' }}>
-          <BaseTable data={usersData} structure={_structure} onRenderActionPopover={() => {}} />
+          <BaseTable
+            data={usersData}
+            structure={_structure}
+            onRenderActionPopover={() => {}}
+            page={page}
+            setPage={setPage}
+          />
         </section>
       </div>
     </ContentLayout>

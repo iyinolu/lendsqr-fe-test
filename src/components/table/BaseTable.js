@@ -5,7 +5,9 @@ import { filterIcon } from 'src/assets/icons/filter'
 import PropTypes from 'prop-types'
 import objectPath from 'object-path'
 
-export const BaseTable = ({ structure, data }) => {
+const TablePaginationGroup = React.lazy(() => import('../pagination'))
+
+export const BaseTable = ({ structure, data, page, setPage }) => {
   const renderCell = (row, col, idx) => {
     switch (col.type) {
       case 'text':
@@ -48,38 +50,52 @@ export const BaseTable = ({ structure, data }) => {
   }
 
   return (
-    <CCard>
-      <table>
-        <thead>
-          <tr>
-            {structure.map((item, idx) => {
+    <>
+      <CCard>
+        <table>
+          <thead>
+            <tr>
+              {structure.map((item, idx) => {
+                return (
+                  <th key={idx} scope="col" className={assignTableCellClass(item)}>
+                    <div className="users-table-header">
+                      <span>{item.columnName}</span>
+                      {item.hasFilter && (
+                        <span role="button" className="filter-btn">
+                          <CIcon icon={filterIcon} />
+                        </span>
+                      )}
+                    </div>
+                  </th>
+                )
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, idx) => {
               return (
-                <th key={idx} scope="col" className={assignTableCellClass(item)}>
-                  <div className="users-table-header">
-                    <span>{item.columnName}</span>
-                    {item.hasFilter && (
-                      <span role="button" className="filter-btn">
-                        <CIcon icon={filterIcon} />
-                      </span>
-                    )}
-                  </div>
-                </th>
+                <tr key={idx}>{structure.map((col, colIdx) => renderCell(row, col, colIdx))}</tr>
               )
             })}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, idx) => {
-            return <tr key={idx}>{structure.map((col, colIdx) => renderCell(row, col, colIdx))}</tr>
-          })}
-          <tr></tr>
-        </tbody>
-      </table>
-    </CCard>
+            <tr></tr>
+          </tbody>
+        </table>
+      </CCard>
+      <TablePaginationGroup
+        currentPage={page}
+        onPageChange={(pageValue) => {
+          setPage(pageValue)
+        }}
+        pageSize={10}
+        totalCount={100}
+      />
+    </>
   )
 }
 
 BaseTable.propTypes = {
   structure: PropTypes.arrayOf(PropTypes.any).isRequired,
   data: PropTypes.arrayOf(PropTypes.any),
+  page: PropTypes.number,
+  setPage: PropTypes.func,
 }

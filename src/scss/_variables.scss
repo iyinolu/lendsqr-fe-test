@@ -347,7 +347,7 @@ $mobile-breakpoint: xl;
 // $link-color:                              $primary !default;
 // $link-decoration:                         underline !default;
 // $link-shade-percentage:                   20% !default;
-// $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color: #545f7d;
 // $link-hover-decoration:                   null !default;
 
 // $stretched-link-pseudo-element:           after !default;
@@ -1136,36 +1136,36 @@ $dropdown-item-padding-y: 0.6rem;
 // Pagination
 
 // scss-docs-start pagination-variables
-// $pagination-padding-y:              .375rem !default;
-// $pagination-padding-x:              .75rem !default;
+$pagination-padding-y: 0.075rem;
+$pagination-padding-x: 0.45rem;
 // $pagination-padding-y-sm:           .25rem !default;
 // $pagination-padding-x-sm:           .5rem !default;
 // $pagination-padding-y-lg:           .75rem !default;
 // $pagination-padding-x-lg:           1.5rem !default;
 
-// $pagination-color:                  $link-color !default;
-// $pagination-bg:                     $white !default;
+$pagination-color: rgba(#545f7d, 0.6);
+$pagination-bg: transparent;
 // $pagination-border-width:           $border-width !default;
 // $pagination-border-radius:          $border-radius !default;
 // $pagination-margin-start:           -$pagination-border-width !default;
-// $pagination-border-color:           $gray-300 !default;
+$pagination-border-color: transparent;
 
-// $pagination-focus-color:            $link-hover-color !default;
+$pagination-focus-color: $link-hover-color;
 // $pagination-focus-bg:               $gray-200 !default;
 // $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 // $pagination-focus-outline:          0 !default;
 
-// $pagination-hover-color:            $link-hover-color !default;
-// $pagination-hover-bg:               $gray-200 !default;
-// $pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-color: $link-hover-color;
+$pagination-hover-bg: transparent;
+$pagination-hover-border-color: transparent;
 
-// $pagination-active-color:           $component-active-color !default;
-// $pagination-active-bg:              $component-active-bg !default;
+$pagination-active-color: $link-hover-color;
+$pagination-active-bg: transparent;
 // $pagination-active-border-color:    $pagination-active-bg !default;
 
 // $pagination-disabled-color:         $gray-600 !default;
 // $pagination-disabled-bg:            $white !default;
-// $pagination-disabled-border-color:  $gray-300 !default;
+$pagination-disabled-border-color:  transparent;
 
 // $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 // scss-docs-end pagination-variables

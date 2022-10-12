@@ -66,6 +66,40 @@
     }
 }
 
+.pagination {
+    margin: 0 !important;
+}
+
+.page-item {
+    &:first-child {
+        margin-right: 10px;
+        border-radius: 7px !important;
+        background: rgba(33, 63, 125, 0.1);
+        border-color: transparent;
+
+        & .page-link {
+            border-radius: 7px !important;
+            background: rgba(33, 63, 125, 0.1);
+        }
+    }
+    &:last-child {
+        border-radius: 7px !important;
+        background: rgba(33, 63, 125, 0.1);
+        border-color: transparent;
+
+        & .page-link {
+            border-radius: 7px !important;
+            background: rgba(33, 63, 125, 0.1);
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.page-link.disabled,
+.disabled > .page-link {
+    opacity: 0.3;
+}
+
 @media (min-width: 960px) {
     .body {
         padding-left: 3rem;

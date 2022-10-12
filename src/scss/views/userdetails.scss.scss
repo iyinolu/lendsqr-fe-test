@@ -17,12 +17,14 @@
     flex-direction: column;
     height: 100%;
     padding: 30px 30px 0;
+    align-items: center;
 
     & #details {
         display: flex;
         align-items: center;
         width: max-content;
         flex-direction: column;
+        text-align: center;
 
         & .avatar-xl {
             width: 5rem !important;
@@ -73,7 +75,7 @@
 }
 
 .user-details-nav {
-    display: flex;
+    display: none;
     list-style: none;
     justify-content: space-around;
     margin: 0;
@@ -125,22 +127,12 @@
     }
 }
 
-.profilecard-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 30px 30px 0;
+.mobile-nav {
+    display: block;
+    padding: 17px;
 
-    & #details {
-        display: flex;
-        align-items: center;
-        width: max-content;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    & #navigation {
-        display: none;
+    & .dropdown-container {
+        justify-content: center;
     }
 }
 
@@ -150,9 +142,17 @@
             flex-direction: row;
             text-align: start;
         }
+    }
 
-        & #navigation {
-            display: block;
+    .user-details-nav {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+
+        & .dropdown-container {
+            justify-content: unset;
         }
     }
 }

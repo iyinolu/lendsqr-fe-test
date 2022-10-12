@@ -1,0 +1,33 @@
+.custom-pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .page-link {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    & .icon {
+        width: 0.7rem !important;
+        height: 0.7rem !important;
+    }
+}
+
+.page-size-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #545f7d;
+}
+
+.page-size-select {
+    padding: 5px 15px;
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    margin: 0 11px;
+    display: flex;
+    align-items: center;
+}
