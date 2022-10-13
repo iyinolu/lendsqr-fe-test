@@ -103,6 +103,11 @@
             border-color: $primary-brand-color;
         }
     }
+
+    & .active-nav {
+        color: $primary-brand-color;
+        border-color: $primary-brand-color;
+    }
 }
 
 .full-details {

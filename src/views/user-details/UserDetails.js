@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CButton } from '@coreui/react'
 import { CCard } from '@coreui/react'
 import { _personal_data, _education_data, _guarantor_data, _social_data } from './temp/_data'
 import { useDataById } from '../../hooks/useDataById'
 import { useParams } from 'react-router-dom'
+import { _profileNav } from './utils/_profileNav'
 
 const ContentLayout = React.lazy(() => import('../../components/ContentLayout'))
 const ProfileCard = React.lazy(() => import('./components/profileCard'))
@@ -15,6 +16,7 @@ export const UserDetails = () => {
   const { id } = useParams()
   const [userData] = useDataById(id)
   const navigate = useNavigate()
+  const [activeNav, setActiveNav] = useState(1)
 
   const onRenderActionComponent = () => (
     <div className="action-btn-group">
@@ -42,6 +44,10 @@ export const UserDetails = () => {
             fullName={`${userData.profile?.firstName ?? ''} ${userData.profile?.lastName ?? ''}`}
             accountBalance={`N${userData.accountBalance}` ?? 0.0}
             accountNumber={userData.accountNumber}
+            currentNav={activeNav}
+            navSchema={_profileNav}
+            onchangeNav={setActiveNav}
+            avatar={userData.profile?.avatar}
           />
         </section>
         <section id="full-details" className="full-details">

@@ -7,13 +7,21 @@ import PropTypes from 'prop-types'
 
 const MobileNav = React.lazy(() => import('./mobileNav'))
 
-export const ProfileCard = ({ fullName, accountBalance, accountNumber }) => {
+export const ProfileCard = ({
+  fullName,
+  accountBalance,
+  accountNumber,
+  navSchema,
+  currentNav,
+  onchangeNav,
+  avatar,
+}) => {
   return (
     <CCard>
       <div className="profilecard-container">
         <div id="details">
           <div className="profile-avatar">
-            <CAvatar src={defaultProfileImg} size="xl" />
+            <CAvatar src={avatar ?? defaultProfileImg} size="xl" />
           </div>
           <div aria-label="quick user bio" className="user-quick-bio detail-col ms-3">
             <h2>{fullName}</h2>
@@ -39,21 +47,16 @@ export const ProfileCard = ({ fullName, accountBalance, accountNumber }) => {
         <div id="navigation" className="mt-4">
           <MobileNav />
           <ul role="navigation" aria-label="user details navigation" className="user-details-nav">
-            <li>
-              <button>General Details</button>
-            </li>
-            <li>
-              <button>Bank Details</button>
-            </li>
-            <li>
-              <button>Loans</button>
-            </li>
-            <li>
-              <button>Savings</button>
-            </li>
-            <li>
-              <button>Apps and System</button>
-            </li>
+            {navSchema.map((item, idx) => (
+              <li aria-label={item.label ?? 'Navigation link'} key={idx}>
+                <button
+                  className={`${item.key === currentNav ? 'active-nav' : ''}`}
+                  onClick={() => onchangeNav(item.key)}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -65,6 +68,10 @@ ProfileCard.propTypes = {
   fullName: PropTypes.string,
   accountNumber: PropTypes.string,
   accountBalance: PropTypes.string,
+  navSchema: PropTypes.array,
+  currentNav: PropTypes.number,
+  onchangeNav: PropTypes.func,
+  avatar: PropTypes.string,
 }
 
 export default ProfileCard

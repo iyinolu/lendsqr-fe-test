@@ -2,7 +2,6 @@ export const _personal_data = [
   {
     title: 'FULL NAME',
     renderer: (data) => {
-      console.log(data)
       return `${data.profile?.firstName ?? '-'} ${data.profile?.lastName ?? '-'}`
     },
   },

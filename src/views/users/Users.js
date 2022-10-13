@@ -21,7 +21,7 @@ export const Users = () => {
   return (
     <ContentLayout title="Users" headerActionComponent={() => <></>}>
       <div>
-        <section id="users-dashboard" className="users-dashoard">
+        <section id="users-dashboard" className="users-dashboard">
           {usersInfo.map((info, idx) => (
             <InfoCard key={idx} icon={info.icon} subtitle={info.subtitle} title={info.title} />
           ))}
