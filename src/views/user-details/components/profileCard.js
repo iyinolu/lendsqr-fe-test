@@ -3,10 +3,11 @@ import { CCard, CAvatar } from '@coreui/react'
 import defaultProfileImg from '../../../assets/images/avatars/default-avatar.png'
 import { starChecked, starUnchecked } from 'src/assets/icons/star'
 import CIcon from '@coreui/icons-react'
+import PropTypes from 'prop-types'
 
 const MobileNav = React.lazy(() => import('./mobileNav'))
 
-export const ProfileCard = () => {
+export const ProfileCard = ({ fullName, accountBalance, accountNumber }) => {
   return (
     <CCard>
       <div className="profilecard-container">
@@ -15,8 +16,8 @@ export const ProfileCard = () => {
             <CAvatar src={defaultProfileImg} size="xl" />
           </div>
           <div aria-label="quick user bio" className="user-quick-bio detail-col ms-3">
-            <h2>Grace Effiom</h2>
-            <p>LSQFf587g90</p>
+            <h2>{fullName}</h2>
+            <p>{accountNumber}</p>
           </div>
           <div className="vertical-divide" />
           <div aria-label="user tier" className="detail-col user-tier">
@@ -31,7 +32,7 @@ export const ProfileCard = () => {
           </div>
           <div className="vertical-divide" />
           <div aria-label="bank info" className="bank-info detail-col">
-            <h2>N200,000.00</h2>
+            <h2>{accountBalance}</h2>
             <p>9912345678/Providus Bank</p>
           </div>
         </div>
@@ -59,4 +60,11 @@ export const ProfileCard = () => {
     </CCard>
   )
 }
+
+ProfileCard.propTypes = {
+  fullName: PropTypes.string,
+  accountNumber: PropTypes.string,
+  accountBalance: PropTypes.string,
+}
+
 export default ProfileCard

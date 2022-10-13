@@ -27,7 +27,11 @@ export const UserDetails = () => {
   return (
     <ContentLayout title="Users Details" headerActionComponent={onRenderActionComponent}>
       <section id="profile-card" className="profile-card">
-        <ProfileCard />
+        <ProfileCard
+          fullName={`${userData.profile?.firstName ?? ''} ${userData.profile?.lastName ?? ''}`}
+          accountBalance={`N${userData.accountBalance}` ?? 0.0}
+          accountNumber={userData.accountNumber}
+        />
       </section>
       <section id="full-details" className="full-details">
         <CCard>
