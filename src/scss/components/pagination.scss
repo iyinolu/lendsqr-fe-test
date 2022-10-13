@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 
     & .page-link {
         display: flex;
@@ -21,6 +22,7 @@
     align-items: center;
     font-size: 14px;
     color: #545f7d;
+    margin-bottom: 27px;
 }
 
 .page-size-select {
@@ -30,4 +32,14 @@
     margin: 0 11px;
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 647px) {
+    .custom-pagination {
+        flex-direction: row;
+    }
+
+    .page-size-container {
+        margin-bottom: 0px;
+    }
 }

@@ -60,6 +60,10 @@
             width: max-content;
         }
     }
+
+    & #navigation {
+        width: 80%;
+    }
 }
 
 .vertical-divide {
@@ -79,6 +83,7 @@
     list-style: none;
     justify-content: space-around;
     margin: 0;
+    padding: 0;
 
     & button {
         border: none;
@@ -138,9 +143,14 @@
 
 @media (min-width: 765px) {
     .profilecard-container {
+        align-items: start;
         & #details {
             flex-direction: row;
             text-align: start;
+        }
+
+        & #navigation {
+            align-self: center;
         }
     }
 

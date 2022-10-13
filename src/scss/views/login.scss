@@ -1,0 +1,105 @@
+.login-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-container {
+    & img {
+        width: 140px;
+        margin-left: 30px;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & #welcome {
+        color: #213f7d;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 29px;
+    }
+
+    & #instruction {
+        color: #545f7d;
+        margin-bottom: 60px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+
+.form-container > div {
+    min-width: 80%;
+}
+
+.illustration {
+    display: none;
+    padding: 10px 0;
+    align-self: start;
+    margin-top: 100px;
+    margin-left: 91px;
+
+    & #illustration-img {
+        margin-top: 164px;
+        width: 90%;
+        height: auto;
+    }
+}
+
+.login-form {
+    & .form-control {
+        font-size: 16px;
+        padding: 10px 17px;
+    }
+}
+
+.forgot-password {
+    font-size: 11px;
+    display: block;
+    color: $primary-brand-color;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $primary-brand-color;
+    }
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 30px;
+    background: $primary-brand-color;
+    border-color: $primary-brand-color;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover {
+        background: $primary-brand-color;
+        border-color: $primary-brand-color;
+    }
+}
+
+@media (min-width: 647px) {
+    .form-container > div {
+        min-width: 58%;
+    }
+}
+
+@media (min-width: 965px) {
+    .illustration {
+        display: block;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-container > div {
+        width: 400px;
+        min-width: none;
+        max-width: none;
+    }
+}
