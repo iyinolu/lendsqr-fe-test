@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Users = React.lazy(() => import('./views/users/Users'))
-const UserDetails = React.lazy(() => import('./views/user-details/UserDetails'))
+const Users = React.lazy(() => import('./views/users'))
+const UserDetails = React.lazy(() => import('./views/user-details'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },

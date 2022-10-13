@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import InfoCard from 'src/components/infographics/infoCard'
 import { BaseTable } from 'src/components/table/BaseTable'
-import { usersInfo } from './_usersInfo'
-import { _structure } from './_tablestructure'
+import { usersInfo } from './utils/_usersInfo'
+import { _structure } from './utils/_tablestructure'
 import { useAllUserData } from '../../hooks/useAllUserData'
 import { usePaginateDate } from 'src/hooks/usePaginateData'
 
@@ -26,7 +26,7 @@ export const Users = () => {
             <InfoCard key={idx} icon={info.icon} subtitle={info.subtitle} title={info.title} />
           ))}
         </section>
-        <section id="users-table" className="users-table" style={{ marginTop: '20px' }}>
+        <section id="users-table" className="mt-3 users-table">
           <BaseTable
             data={tableData}
             structure={_structure}
