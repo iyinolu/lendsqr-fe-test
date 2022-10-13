@@ -100,6 +100,11 @@
     opacity: 0.3;
 }
 
+.nav-link-active {
+    background-color: rgba($primary-brand-color, 0.06);
+    border-left: 4px solid $primary-brand-color;
+}
+
 @media (min-width: 960px) {
     .body {
         padding-left: 3rem;

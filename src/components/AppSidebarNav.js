@@ -31,7 +31,9 @@ export const AppSidebarNav = ({ items }) => {
           })}
         key={index}
         {...rest}
-        className={`${(highlighted && 'nav-link-highlighted mb-2') ?? ''}`}
+        className={`${(highlighted && 'nav-link-highlighted mb-2') ?? ''} ${
+          (location.pathname.includes(item?.to) && 'nav-link-active') ?? ''
+        }`}
       >
         {navLink(name, icon, badge)}
       </Component>

@@ -45,3 +45,17 @@
     --cui-btn-disabled-bg: transparent;
     --cui-gradient: none;
 }
+
+.go-back-btn {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    min-width: fit-content;
+    color: #545f7d;
+
+    & .icon {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+        margin-right: 10px;
+    }
+}
