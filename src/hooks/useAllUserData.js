@@ -8,6 +8,7 @@ export const useAllUserData = () => {
     getUser()
       .then((res) => {
         setUsersData(res.data)
+        localStorage.setItem('lendsqr-data', JSON.stringify(res.data))
       })
       .catch((err) => {
         // TODO: log error
@@ -15,7 +16,12 @@ export const useAllUserData = () => {
   }, [])
 
   useEffect(() => {
-    reloadData()
+    const cachedData = localStorage.getItem('lendsqr-data')
+    if (cachedData) {
+      setUsersData(JSON.parse(cachedData))
+    } else {
+      reloadData()
+    }
   }, [reloadData])
 
   return [usersData, reloadData]
