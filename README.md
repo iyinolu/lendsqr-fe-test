@@ -1,4 +1,7 @@
-## Quick Start
+![lendsqr-logo](https://user-images.githubusercontent.com/47259302/195503562-f297120c-e3a3-477a-b9f8-8acd713aa13a.png)
+# Lendsqr Frontend engineering test
+
+### Instructions
 
 - Clone the repo: `git clone repo.git`
 
@@ -46,8 +49,4 @@ or
 $ yarn build
 ```
 
-
-## Copyright and License
-
-copyright 2022 creativeLabs Łukasz Holeczek.   
 
