@@ -8,7 +8,7 @@
 ```
 /login
 /users
-/users\:id
+/users/:id
 ```
 
 ### Installation
