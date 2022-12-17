@@ -6,9 +6,9 @@
 - Clone the repo: `git clone https://github.com/iyinolu/lendsqr-fe-test.git`
 - Routes:
 ```
-\login
-\users
-\users\:id
+/login
+/users
+/users\:id
 ```
 
 ### Installation
